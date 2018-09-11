@@ -20,7 +20,8 @@ class Piece():
         self.screen = screen
         
     def draw(self):
-        pygame.draw.lines(self.screen, self.color, True, self.points, 1)
+        #pygame.draw.lines(self.screen, self.color, True, self.points, 2)
+        pygame.draw.polygon(self.screen, self.color, self.points, 0)  #the last param is 0 or missing, then the polygon is filled.
     
 def run():
     pygame.init()
